@@ -11,7 +11,8 @@ const config = {
 		adapter: adapter()
 	},
 	package: {
-		exports: (filepath) => filepath === 'Scroller.svelte'
+		// Only exports re-exported modules and components.
+		exports: (filepath) => filepath === 'index.ts'
 	}
 };
 
