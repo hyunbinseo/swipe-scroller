@@ -10,17 +10,11 @@ body {
 		color: rgb(161 161 170);
 	}
 }
-.container-outer-cover {
-	background-clip: content-box;
+.container-outer {
 	background-color: rgb(255 255 255);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
 @media (prefers-color-scheme: dark) {
-	.container-outer-cover {
+	.container-outer {
 		background-color: rgb(24 24 27);
 	}
 }
