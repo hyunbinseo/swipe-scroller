@@ -1,1 +1,1 @@
-# svelte-scroller
+# swipe-scroller
