@@ -57,14 +57,22 @@
 			class="container-outer scroller-control"
 			style="--button-width: {buttonWidth}; --button-margin-multiplier: {hangButtons ? -1 : 1}"
 		>
-			<button type="button" on:click={() => scroll()}>
+			<button
+				type="button"
+				aria-label="scroll {!invertButtons ? 'left' : 'right'}"
+				on:click={() => scroll()}
+			>
 				<slot name="button-prev">
 					<div class="icon-wrapper" style="margin-left: var(--button-margin);">
 						<Chevron />
 					</div>
 				</slot>
 			</button>
-			<button type="button" on:click={() => scroll(false)}>
+			<button
+				type="button"
+				aria-label="scroll {invertButtons ? 'left' : 'right'}"
+				on:click={() => scroll(false)}
+			>
 				<slot name="button-next">
 					<div class="icon-wrapper" style="margin-right: var(--button-margin);">
 						<Chevron left={false} />
