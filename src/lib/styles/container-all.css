@@ -1,2 +1,12 @@
 @import './container-inner.css';
 @import './container-outer.css';
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}

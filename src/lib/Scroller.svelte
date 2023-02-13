@@ -93,6 +93,11 @@
 		overflow-x: visible;
 	}
 
+	.scroller :global(> *) {
+		flex-shrink: 0;
+		scroll-snap-align: start;
+	}
+
 	.scroller-js {
 		overflow-x: auto;
 		scroll-behavior: smooth;
@@ -105,6 +110,7 @@
 	}
 
 	.scroller-control {
+		background-color: transparent;
 		pointer-events: none;
 		position: absolute;
 		top: 0;
