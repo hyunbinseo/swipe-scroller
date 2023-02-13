@@ -5,12 +5,14 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 }
+
 @media (min-width: 640px) {
 	.container-inner {
 		padding-left: 4rem;
 		padding-right: 4rem;
 	}
 }
+
 @media (min-width: 1024px) {
 	.container-inner {
 		padding-left: 8rem;

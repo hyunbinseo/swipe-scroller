@@ -11,14 +11,17 @@
 		width: 72%;
 		max-width: 296px;
 	}
+
 	img {
 		aspect-ratio: 1;
 		width: 100%;
 	}
+
 	a,
 	img {
 		border-radius: 0.75rem;
 	}
+
 	@media (min-width: 640px) {
 		a,
 		img {

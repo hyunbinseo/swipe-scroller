@@ -4,12 +4,14 @@
 	margin-right: auto;
 	max-width: 80rem;
 }
+
 @media (min-width: 640px) {
 	.container-outer {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
 }
+
 @media (min-width: 1024px) {
 	.container-outer {
 		padding-left: 4rem;

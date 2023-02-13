@@ -148,6 +148,7 @@
 		.scroller-wrapper:hover .scroller-control {
 			opacity: 1;
 		}
+
 		.icon-wrapper:hover {
 			background-color: rgba(0, 0, 0, 0.4);
 		}
@@ -157,6 +158,7 @@
 		.scroller-control {
 			transition: opacity 150ms;
 		}
+
 		.icon-wrapper {
 			transition: background-color 150ms;
 		}
