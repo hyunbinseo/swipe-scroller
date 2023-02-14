@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+.container-inner,
+.container-outer {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80rem; /* 1280px */
+}
+
+.container-inner {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.container-outer {
+	background-clip: content-box;
+}
+
+@media (min-width: 640px) {
+	.container-inner {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	.container-outer {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container-inner {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+
+	.container-outer {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}
