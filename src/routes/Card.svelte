@@ -3,16 +3,20 @@
 </script>
 
 <a href=".">
-	<img alt="" {src} />
+	<img alt="" draggable="false" {src} />
 </a>
 
 <style>
 	a {
 		width: 72%;
 		max-width: 296px;
+		/* fixes :focus outline being clipped */
+		outline-offset: -2px;
 	}
 
 	img {
+		/* fixes <a> being larger than <img> */
+		display: block;
 		aspect-ratio: 1;
 		width: 100%;
 	}
