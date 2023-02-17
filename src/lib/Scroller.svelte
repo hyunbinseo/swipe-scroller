@@ -2,9 +2,14 @@
 	import { onMount } from 'svelte';
 	import Chevron from './Chevron.svelte';
 
+	/** Width and height of the clickable control buttons. */
 	export let buttonWidth = '2.5rem';
+	/** Horizontal gap between the provided card components. */
 	export let cardGap = '1.25rem';
+
+	/** Hang control buttons on the outer container border. */
 	export let hangButtons = true;
+	/** Invert the scroll direction of the control buttons. */
 	export let invertButtons = false;
 
 	// Enable scroller
