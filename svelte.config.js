@@ -10,10 +10,6 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	package: {
-		// Only exports re-exported modules and components.
-		exports: (filepath) => filepath === 'index.ts'
-	}
-};
+	};
 
 export default config;
