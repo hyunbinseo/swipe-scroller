@@ -60,6 +60,10 @@ The entire folder can be zipped and downloaded using [download-directory](https:
 
 [npm]: https://www.npmjs.com/package/swipe-scroller
 
+## Events
+
+- `on:scroll` - The DOM event is [forwarded](https://svelte.dev/tutorial/dom-event-forwarding).
+
 ## Options
 
 ```typescript
