@@ -8,15 +8,14 @@ Horizontal card slider for the modern web. Requires minimum JavaScript.
 
 ## Features
 
-- **Snapping Cards, Smooth Scroll** - based on CSS, not JS.
-- **Easy to Use** - just pass the card components to the `<slot />`.
-- **Customizable** - override provided buttons and `<noscript>`.
-- **Various Controls** - touch, scroll, click, and the `tab`[^1] key.
-- **Mouse Support** - hover[^2] to show clickable control buttons.
-- **Accessible** - `prefers-reduced-motion` and button `aria-label`.
+- **Snapping Cards, Smooth Scroll** - Powered by CSS, not JS.
+- **Easy to Use** - Just pass the card components to the `<slot />`.
+- **Customizable** - Override the provided buttons and `<noscript>`.
+- **Various Controls** - Supports touch, scroll, click[^1], and the `tab` key[^2].
+- **Light or Dark** - The semi-transparent clickable buttons suits both.
 
-[^1]: Wrap the card component with [tabbable elements] such as `<a>` or `<button>`.
-[^2]: Only when hovered with a cursor. `@media (hover: hover) and (pointer: fine)`
+[^1]: The buttons are shown only when hovered with `@media (pointer: fine)` such as a mouse cursor.
+[^2]: For accessibility, wrap the card component with [tabbable elements] such as `<a>` or `<button>`.
 
 [tabbable elements]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
 
@@ -34,10 +33,12 @@ Supported and tested on the latest evergreen browsers.
 
 ## Limitations
 
-- [x] JavaScript is required to enable horizontal scroll.
-- [x] Card components should have identical width.
+- JavaScript is required to enable horizontal scroll.
+- Card components should have identical width.
 
 ## Installation
+
+<!-- TODO: Write additional documents -->
 
 Reference [How it works] and [Installation] for in-depth explanation.
 
@@ -48,13 +49,13 @@ Reference [How it works] and [Installation] for in-depth explanation.
 
 For new projects, just replace the content of the `src/routes` folder.
 
-1. Prepare a SvelteKit[^3] project.
+1. Prepare a SvelteKit project[^3].
 2. Install the package via [npm].
 3. Reference the [src/routes](src/routes) directory.
 
 The entire folder can be zipped and downloaded using [download-directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes).
 
-[^3]: Requires `@sveltejs/kit` 1.0 and later as it includes `+(layout|page).svelte` files.
+[^3]: The project should support both `+(layout|page).svelte` files. SvelteKit `1.x` is recommended.
 
 <!-- TODO: Check if the following link works. -->
 
@@ -67,6 +68,8 @@ The entire folder can be zipped and downloaded using [download-directory](https:
 ## Options
 
 ```typescript
+// Optional Component Props
+
 /** Width and height of the clickable control buttons. */
 export let buttonWidth = '2.5rem';
 /** Horizontal gap between the provided card components. */
@@ -79,3 +82,13 @@ export let invertButtons = false;
 ```
 
 <!-- Add image with explanation -->
+
+## Slots
+
+```svelte
+<!-- Optional Named Slots -->
+
+<slot name="noscript" />
+<slot name="button-prev" />
+<slot name="button-next" />
+```
