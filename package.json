@@ -1,12 +1,12 @@
 {
 	"name": "swipe-scroller",
 	"version": "0.0.1",
+	"description": "",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package",
-		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -32,16 +32,25 @@
 		"vite": "^4.0.0"
 	},
 	"type": "module",
+	"files": [
+		"dist"
+	],
 	"exports": {
-		"./package.json": "./package.json",
 		".": {
-			"types": "./package/index.d.ts",
-			"svelte": "./package/index.js",
-			"default": "./package/index.js"
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
 		}
 	},
-	"files": [
-		"package"
-	],
-	"svelte": "./package/index.js"
+	"svelte": "./dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyunbinseo/swipe-scroller.git"
+	},
+	"author": "Hyunbin Seo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hyunbinseo/swipe-scroller/issues"
+	},
+	"homepage": "https://github.com/hyunbinseo/swipe-scroller#readme"
 }
