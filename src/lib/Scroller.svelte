@@ -65,16 +65,26 @@
 			class:container-inner={!hangButtons}
 			style="--button-width: {buttonWidth};"
 		>
-			<button type="button" tabindex="-1" on:click={() => scroll()}>
+			<button
+				type="button"
+				tabindex="-1"
+				style="margin-left: var(--button-margin);"
+				on:click={() => scroll()}
+			>
 				<slot name="button-prev">
-					<div class="icon-wrapper" style="margin-left: var(--button-margin);">
+					<div class="icon-wrapper">
 						<Chevron />
 					</div>
 				</slot>
 			</button>
-			<button type="button" tabindex="-1" on:click={() => scroll(false)}>
+			<button
+				type="button"
+				tabindex="-1"
+				style="margin-right: var(--button-margin);"
+				on:click={() => scroll(false)}
+			>
 				<slot name="button-next">
-					<div class="icon-wrapper" style="margin-right: var(--button-margin);">
+					<div class="icon-wrapper">
 						<Chevron left={false} />
 					</div>
 				</slot>
