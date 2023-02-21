@@ -60,8 +60,10 @@
 
 	{#if offsetLeft !== undefined}
 		<div
-			class="container-outer scroller-control"
-			style="--button-width: {buttonWidth}; --button-margin-multiplier: {hangButtons ? -1 : 2}"
+			class="scroller-control"
+			class:container-outer={hangButtons}
+			class:container-inner={!hangButtons}
+			style="--button-width: {buttonWidth};"
 		>
 			<button type="button" tabindex="-1" on:click={() => scroll()}>
 				<slot name="button-prev">
@@ -134,6 +136,14 @@
 		pointer-events: auto;
 	}
 
+	.scroller-control.container-inner {
+		--button-margin: calc(var(--button-width) / -2);
+	}
+
+	.scroller-control.container-outer {
+		--button-margin: calc(var(--button-width) / 2 * var(--button-margin-multiplier, 1));
+	}
+
 	.icon-wrapper {
 		border-radius: 100%;
 		height: var(--button-width);
@@ -141,13 +151,6 @@
 		padding: calc(var(--button-width) / 4);
 		background-color: rgba(0, 0, 0, 0.2);
 		color: white;
-		--button-margin: calc(var(--button-width) / 2);
-	}
-
-	@media (min-width: 640px) {
-		.icon-wrapper {
-			--button-margin: calc(var(--button-width) / 2 * var(--button-margin-multiplier));
-		}
 	}
 
 	@media (hover: hover) and (pointer: fine) {

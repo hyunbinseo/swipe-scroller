@@ -34,6 +34,10 @@ body {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
+
+	.container-outer.scroller-control {
+		--button-margin-multiplier: -1;
+	}
 }
 
 @media (min-width: 1024px) {
