@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	// TODO: Replace import path to the library
 	import Scroller from '$lib/Scroller.svelte';
 </script>
