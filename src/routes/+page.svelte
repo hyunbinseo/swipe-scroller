@@ -29,6 +29,9 @@
 			spotify: '1YTj33nCCjZxaPc2RZIjE0'
 		}
 	];
+
+	let hangButtons = true;
+	let invertButtons = false;
 </script>
 
 <div class="container-inner">
@@ -41,7 +44,7 @@
 	<p>Discography, from latest</p>
 </div>
 
-<Scroller>
+<Scroller {hangButtons} {invertButtons}>
 	{#each { length: releases.length } as _, index}
 		{@const reverseIndex = releases.length - 1 - index}
 		{@const release = releases[reverseIndex]}
@@ -61,6 +64,11 @@
 		</a>
 	{/each}
 </Scroller>
+
+<pre class="container-inner">
+- Invert Buttons: <button on:click={() => (invertButtons = !invertButtons)}>{invertButtons}</button>
+- Hang Buttons: <button on:click={() => (hangButtons = !hangButtons)}>{hangButtons}</button>
+</pre>
 
 <style>
 	a.card {
@@ -120,5 +128,16 @@
 		margin: 3rem 0;
 		width: 3rem;
 		border-bottom: solid;
+	}
+
+	pre {
+		display: none;
+		line-height: 200%;
+	}
+
+	@media (pointer: fine) {
+		pre {
+			display: block;
+		}
 	}
 </style>
