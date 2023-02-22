@@ -36,13 +36,11 @@
 		"dist"
 	],
 	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js",
-			"default": "./dist/index.js"
+		"./Scroller.svelte": {
+			"types": "./dist/Scroller.svelte.d.ts",
+			"svelte": "./dist/Scroller.svelte"
 		}
 	},
-	"svelte": "./dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/swipe-scroller.git"
