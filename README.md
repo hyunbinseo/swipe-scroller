@@ -40,9 +40,10 @@ Reference [How it works](docs/how-it-works.md) for in-depth explanation.
 
 1. Prepare a SvelteKit project[^3].
 2. Install the package via [npm].
-3. Reference the [src/routes](src/routes) directory.
+3. Reference the [src/routes](src/routes) directory[^4].
 
 [^3]: The project should support both `+(layout|page).svelte` files. SvelteKit `1.x` is recommended.
+[^4]: The directory contains the source code for the demo page. It can be used as a starter template.
 
 <!-- TODO: Check if the following link works. -->
 
