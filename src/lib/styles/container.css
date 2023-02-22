@@ -10,29 +10,21 @@ body {
 
 .container-inner,
 .container-outer {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	max-width: 80rem; /* 1280px */
 }
 
 .container-inner {
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-.container-outer {
-	background-clip: content-box;
+	padding: 0 2rem;
 }
 
 @media (min-width: 640px) {
 	.container-inner {
-		padding-left: 4rem;
-		padding-right: 4rem;
+		padding: 0 4rem;
 	}
 
 	.container-outer {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding: 0 2rem;
 	}
 
 	.container-outer.scroller-control {
@@ -42,12 +34,10 @@ body {
 
 @media (min-width: 1024px) {
 	.container-inner {
-		padding-left: 8rem;
-		padding-right: 8rem;
+		padding: 0 8rem;
 	}
 
 	.container-outer {
-		padding-left: 4rem;
-		padding-right: 4rem;
+		padding: 0 4rem;
 	}
 }
