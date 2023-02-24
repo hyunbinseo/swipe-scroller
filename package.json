@@ -37,12 +37,12 @@
 		"dist"
 	],
 	"exports": {
+		"./style": "./dist/styles/container-colored.css",
 		"./Scroller.svelte": {
 			"types": "./dist/Scroller.svelte.d.ts",
 			"svelte": "./dist/Scroller.svelte"
 		}
 	},
-	"style": "dist/styles/container-colored.css",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/swipe-scroller.git"

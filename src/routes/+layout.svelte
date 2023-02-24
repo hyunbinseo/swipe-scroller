@@ -1,5 +1,5 @@
 <script>
-	import './app.css';
+	import 'swipe-scroller/style'; // node_modules/swipe-scroller/dist/styles/container-colored.css
 </script>
 
 <div class="container-outer" />

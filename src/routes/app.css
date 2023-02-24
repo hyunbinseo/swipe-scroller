@@ -1,6 +1,0 @@
-/* TODO: Simplify import path using PostCSS */
-@import '/node_modules/swipe-scroller/dist/styles/container-colored.css';
-
-body {
-	font-family: sans-serif;
-}
