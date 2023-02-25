@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+.container-inner,
+.container-outer {
+	margin: 0 auto;
+	max-width: 80rem; /* 1280px */
+}
+
+.container-inner {
+	padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+	.container-inner {
+		padding: 0 4rem;
+	}
+
+	.container-outer {
+		padding: 0 2rem;
+	}
+
+	.container-outer.scroller-control {
+		--button-margin-multiplier: -1;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container-inner {
+		padding: 0 8rem;
+	}
+
+	.container-outer {
+		padding: 0 4rem;
+	}
+}
