@@ -131,12 +131,13 @@
 
 	pre {
 		display: none;
-		line-height: 200%;
 	}
 
 	@media (pointer: fine) {
 		pre {
 			display: block;
+			margin-top: 1rem;
+			line-height: 2;
 		}
 	}
 </style>
