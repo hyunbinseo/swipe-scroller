@@ -1,6 +1,5 @@
 <script>
-	// TODO: Replace import path to the library
-	import Scroller from '$lib/Scroller.svelte';
+	import Scroller from 'swipe-scroller/Scroller.svelte';
 
 	const releases = [
 		{
@@ -48,8 +47,8 @@
 	{#each { length: releases.length } as _, index}
 		{@const reverseIndex = releases.length - 1 - index}
 		{@const release = releases[reverseIndex]}
-		<!-- TODO: Add domain -->
-		{@const src = `/${reverseIndex}.jpg`}
+		{@const domain = 'http://scroller.hyunbin.page/'}
+		{@const src = `${domain}/${reverseIndex}.jpg`}
 		<a
 			class="card"
 			target="_blank"

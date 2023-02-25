@@ -1,7 +1,7 @@
 {
 	"name": "swipe-scroller",
 	"version": "0.0.1",
-	"description": "",
+	"description": "Horizontal card slider for the modern web",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -27,6 +27,7 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte-check": "^3.0.1",
+		"swipe-scroller": "^1.0.0",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"
@@ -41,6 +42,7 @@
 			"svelte": "./dist/Scroller.svelte"
 		}
 	},
+	"style": "dist/styles/container-colored.css",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/swipe-scroller.git"
@@ -50,5 +52,5 @@
 	"bugs": {
 		"url": "https://github.com/hyunbinseo/swipe-scroller/issues"
 	},
-	"homepage": "https://github.com/hyunbinseo/swipe-scroller#readme"
+	"homepage": "https://scroller.hyunbin.page/"
 }

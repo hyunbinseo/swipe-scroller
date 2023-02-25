@@ -1,8 +1,8 @@
 # Swipe Scroller for Svelte
 
-Horizontal card slider for the modern web. Requires minimum JavaScript.
+Horizontal card slider for the modern web. Requires minimum JavaScript. [Demo]
 
-<!-- Add demonstration link and video -->
+[demo]: http://scroller.hyunbin.page/
 
 ## Features
 
@@ -43,13 +43,11 @@ Reference [How it works](docs/how-it-works.md) for in-depth explanation.
 3. Reference the [src/routes](src/routes) directory[^4].
 
 [^3]: The project should support both `+(layout|page).svelte` files. SvelteKit `1.x` is recommended.
-[^4]: The directory contains the source code for the demo page. It can be used as a starter template.
-
-<!-- TODO: Check if the following link works. -->
+[^4]: The directory contains the source code for the [demo] page. It can be used as a starter template.
 
 [npm]: https://www.npmjs.com/package/swipe-scroller
 
-For new projects, replace the content of the `src/routes` folder. [download](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes)
+For new projects, replace the content of the `src/routes` folder. [Download](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes)
 
 ## Events
 
