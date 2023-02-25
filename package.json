@@ -43,6 +43,13 @@
 			"svelte": "./dist/Scroller.svelte"
 		}
 	},
+	"typesVersions": {
+		">4.0": {
+			"Scroller.svelte": [
+				"./dist/Scroller.svelte.d.ts"
+			]
+		}
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/swipe-scroller.git"
