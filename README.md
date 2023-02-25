@@ -1,7 +1,5 @@
 # Swipe Scroller for Svelte
 
-<!-- Add shields.io badges -->
-
 Horizontal card slider for the modern web. Requires minimum JavaScript.
 
 <!-- Add demonstration link and video -->
@@ -38,28 +36,19 @@ Supported and tested on the latest evergreen browsers.
 
 ## Installation
 
-<!-- TODO: Write additional documents -->
-
-Reference [How it works] and [Installation] for in-depth explanation.
-
-[How it works]: docs/how-it-works.md
-[Installation]: docs/installation.md
-
-## Quick Start
-
-For new projects, just replace the content of the `src/routes` folder.
+Reference [How it works](docs/how-it-works.md) for in-depth explanation.
 
 1. Prepare a SvelteKit project[^3].
 2. Install the package via [npm].
 3. Reference the [src/routes](src/routes) directory.
-
-The entire folder can be zipped and downloaded using [download-directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes).
 
 [^3]: The project should support both `+(layout|page).svelte` files. SvelteKit `1.x` is recommended.
 
 <!-- TODO: Check if the following link works. -->
 
 [npm]: https://www.npmjs.com/package/swipe-scroller
+
+For new projects, replace the content of the `src/routes` folder. [download](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes)
 
 ## Events
 
