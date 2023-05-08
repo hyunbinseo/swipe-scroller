@@ -26,6 +26,11 @@
 			name: 'Affectionate',
 			color: 'rgb(40, 35, 49)',
 			spotify: '1YTj33nCCjZxaPc2RZIjE0'
+		},
+		{
+			name: 'Lay It On Me',
+			color: 'rgb(188, 128, 145)',
+			spotify: '7GbY6kNMYLAkJzxUcUq7n3'
 		}
 	];
 
@@ -47,8 +52,7 @@
 	{#each { length: releases.length } as _, index}
 		{@const reverseIndex = releases.length - 1 - index}
 		{@const release = releases[reverseIndex]}
-		{@const domain = 'http://scroller.hyunbin.page/'}
-		{@const src = `${domain}/${reverseIndex}.jpg`}
+		{@const src = `http://scroller.hyunbin.page/${reverseIndex}.jpg`}
 		<a
 			class="card"
 			target="_blank"
