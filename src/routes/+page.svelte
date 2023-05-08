@@ -48,7 +48,7 @@
 	<p>Discography, from latest</p>
 </div>
 
-<Scroller {hangButtons} {invertButtons}>
+<Scroller {hangButtons} {invertButtons} cardGap="0.5rem">
 	{#each { length: releases.length } as _, index}
 		{@const reverseIndex = releases.length - 1 - index}
 		{@const release = releases[reverseIndex]}
@@ -68,10 +68,17 @@
 	{/each}
 </Scroller>
 
-<pre class="container-inner">
-- Invert Buttons: <button on:click={() => (invertButtons = !invertButtons)}>{invertButtons}</button>
-- Hang Buttons: <button on:click={() => (hangButtons = !hangButtons)}>{hangButtons}</button>
-</pre>
+<div class="container-inner options">
+	<label>
+		<input type="checkbox" bind:checked={hangButtons} />
+		Hang Buttons
+	</label>
+	<br />
+	<label>
+		<input type="checkbox" bind:checked={invertButtons} />
+		Invert Buttons
+	</label>
+</div>
 
 <style>
 	a.card {
@@ -81,7 +88,8 @@
 	}
 
 	.card {
-		width: 72%;
+		width: 80%;
+		min-width: 224px;
 		max-width: 296px;
 		overflow: hidden;
 		border-radius: 0.75rem;
@@ -133,15 +141,15 @@
 		border-bottom: solid;
 	}
 
-	pre {
+	.options {
 		display: none;
 	}
 
 	@media (pointer: fine) {
-		pre {
+		.options {
 			display: block;
 			margin-top: 1rem;
-			line-height: 2;
+			line-height: 1.5;
 		}
 	}
 </style>
