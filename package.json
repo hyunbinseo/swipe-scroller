@@ -1,6 +1,6 @@
 {
 	"name": "swipe-scroller",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"description": "Horizontal card slider for the modern web",
 	"scripts": {
 		"dev": "vite dev",
