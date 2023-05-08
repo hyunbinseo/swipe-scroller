@@ -68,6 +68,7 @@
 			<button
 				type="button"
 				tabindex="-1"
+				aria-label={!invertButtons ? 'Scroll Left' : 'Scroll Right'}
 				style="margin-left: var(--button-margin);"
 				on:click={() => scroll()}
 			>
@@ -80,6 +81,7 @@
 			<button
 				type="button"
 				tabindex="-1"
+				aria-label={!invertButtons ? 'Scroll Right' : 'Scroll Left'}
 				style="margin-right: var(--button-margin);"
 				on:click={() => scroll(false)}
 			>
