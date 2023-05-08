@@ -138,6 +138,7 @@
 		right: 0;
 		bottom: 0;
 		display: flex;
+		align-items: center;
 		justify-items: center;
 		justify-content: space-between;
 		opacity: 0;
@@ -145,6 +146,7 @@
 
 	.scroller-control > button {
 		all: unset;
+		cursor: pointer;
 		pointer-events: auto;
 	}
 
