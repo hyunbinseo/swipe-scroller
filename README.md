@@ -51,7 +51,17 @@ For new projects, replace the content of the `src/routes` folder. [Download](htt
 
 ## Events
 
-- `on:scroll` - The DOM event is [forwarded](https://svelte.dev/tutorial/dom-event-forwarding).
+The following DOM events are [forwarded] to the component.
+
+[forwarded]: https://svelte.dev/tutorial/dom-event-forwarding
+
+- [scroll](https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event)
+- [scrollend](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event) - limited browser support
+
+```svelte
+<!-- Provide custom callbacks if needed. -->
+<Scroller on:scroll on:scrollend />
+```
 
 ## Options
 

@@ -49,6 +49,7 @@
 	<div class:container-inner={offsetLeft === undefined}>
 		<div
 			on:scroll
+			on:scrollend
 			bind:this={scroller}
 			class="scroller"
 			class:scroller-js={offsetLeft !== undefined}
