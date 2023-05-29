@@ -3,6 +3,7 @@
 	"version": "1.0.5",
 	"description": "Horizontal card slider for the modern web",
 	"scripts": {
+		"preinstall": "npm i swipe-scroller@latest -D",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -27,7 +28,6 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte-check": "^3.0.1",
-		"swipe-scroller": "^1.0.0",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.4",
 		"vite": "^4.0.0"
