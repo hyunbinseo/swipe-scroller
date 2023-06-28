@@ -1,5 +1,5 @@
 <script>
-	import Scroller from 'swipe-scroller/Scroller.svelte';
+	import Scroller from '$lib/Scroller.svelte';
 
 	const releases = [
 		{
@@ -69,15 +69,21 @@
 </Scroller>
 
 <div class="container-inner options">
-	<label>
-		<input type="checkbox" bind:checked={hangButtons} />
-		Hang Buttons
-	</label>
-	<br />
-	<label>
-		<input type="checkbox" bind:checked={invertButtons} />
-		Invert Buttons
-	</label>
+	<strong>Hover over the scroller to test these options.</strong>
+	<ul>
+		<li>
+			<label>
+				<input type="checkbox" bind:checked={hangButtons} />
+				Hang the arrow buttons at the inner container border.
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" bind:checked={invertButtons} />
+				Invert the functions of the left and right arrow buttons.
+			</label>
+		</li>
+	</ul>
 </div>
 
 <style>
@@ -148,8 +154,14 @@
 	@media (pointer: fine) {
 		.options {
 			display: block;
-			margin-top: 1rem;
+			margin-top: 3rem;
 			line-height: 1.5;
+		}
+
+		.options > ul {
+			margin-top: 0.25rem;
+			list-style: none;
+			padding-inline-start: 0;
 		}
 	}
 </style>

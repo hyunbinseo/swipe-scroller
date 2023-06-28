@@ -3,7 +3,6 @@
 	"version": "1.0.5",
 	"description": "Horizontal card slider for the modern web",
 	"scripts": {
-		"preinstall": "npm i swipe-scroller@latest -D",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",

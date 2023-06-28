@@ -6,20 +6,18 @@ Horizontal card slider for the modern web. Requires minimum JavaScript. [Demo]
 
 ## Features
 
-- **Snapping Cards, Smooth Scroll** - Powered by CSS, not JS.
-- **Easy to Use** - Just pass the card components to the `<slot />`.
-- **Customizable** - Override the provided buttons and `<noscript>`.
-- **Various Controls** - Supports touch, scroll, click[^1], and the `tab` key[^2].
-- **Light or Dark** - The semi-transparent clickable buttons suits both.
+- **Performant** - scrolling and snapping are powered by CSS, not JS.
+- **Accessible** - control with touch, scroll, click[^1], and keyboard[^2].
+- **Customizable** - override the provided buttons and the `<noscript>`.
 
 [^1]: The buttons are shown only when hovered with `@media (pointer: fine)` such as a mouse cursor.
 [^2]: For accessibility, wrap the card component with [tabbable elements] such as `<a>` or `<button>`.
 
 [tabbable elements]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
 
-## Requirements
+## Browser Support
 
-Supported and tested on the latest evergreen browsers.
+Tested on the latest evergreen browsers.
 
 |                       | Chrome | Safari | Firefox | Safari (iOS) | Samsung Internet |
 | --------------------- | ------ | ------ | ------- | ------------ | ---------------- |
@@ -29,25 +27,76 @@ Supported and tested on the latest evergreen browsers.
 [Scroll Snap]: https://caniuse.com/css-snappoints
 [Scroll-behavior]: https://caniuse.com/css-scroll-behavior
 
-## Limitations
+## Quick Start
 
-- JavaScript is required to enable horizontal scroll.
-- Card components should have identical width.
+```bash
+npm create svelte@latest
+npm i swipe-scroller -D
+```
 
-## Installation
+Following code is based on [SvelteKit] v1.
 
-Reference [How it works](docs/how-it-works.md) for in-depth explanation.
+[SvelteKit]: https://kit.svelte.dev/
 
-1. Prepare a SvelteKit project[^3].
-2. Install the package via [npm].
-3. Reference the [src/routes](src/routes) directory[^4].
+```svelte
+<!-- src/routes/+layout.svelte -->
 
-[^3]: The project should support both `+(layout|page).svelte` files. SvelteKit `1.x` is recommended.
-[^4]: The directory contains the source code for the [demo] page. It can be used as a starter template.
+<script>
+  import 'swipe-scroller/style';
+</script>
 
-[npm]: https://www.npmjs.com/package/swipe-scroller
+<div class="container-outer" style="position: fixed; inset: 0;" />
 
-For new projects, replace the content of the `src/routes` folder. [Download](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fhyunbinseo%2Fswipe-scroller%2Ftree%2Fmain%2Fsrc%2Froutes)
+<div style="position: relative; overflow-x: hidden;">
+  <slot />
+</div>
+```
+
+```svelte
+<!-- src/routes/+page.svelte -->
+
+<script>
+  import Scroller from 'swipe-scroller/Scroller.svelte';
+</script>
+
+<div class="container-inner">
+  <h1>Swipe Scroller</h1>
+</div>
+
+<Scroller>
+  {#each { length: 5 } as _, index}
+    <a href="#{index}" class="card">
+      <img src="https://scroller.hyunbin.page/{index}.jpg" alt="" />
+      <div>Card No. {index + 1}</div>
+    </a>
+  {/each}
+</Scroller>
+
+<style>
+  .card {
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    width: 80%;
+    min-width: 224px;
+    max-width: 296px;
+    overflow: hidden;
+  }
+
+  .card > img {
+    display: block;
+    aspect-ratio: 1;
+    width: 100%;
+  }
+
+  .card > div {
+    padding: 1rem;
+    text-align: center;
+  }
+</style>
+```
+
+Reference [how it works](docs/how-it-works.md) for an in-depth explanation.
 
 ## Events
 
@@ -90,3 +139,8 @@ export let invertButtons = false;
 <slot name="button-prev" />
 <slot name="button-next" />
 ```
+
+## Limitations
+
+- JavaScript is required to enable horizontal scroll.
+- Card components should have identical width.
