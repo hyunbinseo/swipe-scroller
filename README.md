@@ -2,7 +2,7 @@
 
 Horizontal card slider for the modern web. Requires minimum JavaScript. [Demo]
 
-[demo]: http://scroller.hyunbin.page/
+[demo]: https://demo.hyunbin.page/swipe-scroller
 
 ## Features
 
