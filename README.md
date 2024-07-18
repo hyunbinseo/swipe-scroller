@@ -11,6 +11,7 @@ Horizontal card slider for the modern web. Requires minimum JavaScript. [Demo]
 - **Customizable** - override the provided buttons and the `<noscript>`.
 
 [^1]: The buttons are shown only when hovered with `@media (pointer: fine)` such as a mouse cursor.
+
 [^2]: For accessibility, wrap the card component with [tabbable elements] such as `<a>` or `<button>`.
 
 [tabbable elements]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
@@ -66,7 +67,7 @@ Following code is based on [SvelteKit] v1.
 <Scroller>
   {#each { length: 5 } as _, index}
     <a href="#{index}" class="card">
-      <img src="https://scroller.hyunbin.page/{index}.jpg" alt="" />
+      <img src="https://picsum.photos/572?random={index}" draggable="false" alt="" />
       <div>Card No. {index + 1}</div>
     </a>
   {/each}
