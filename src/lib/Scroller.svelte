@@ -43,7 +43,7 @@
 		<slot name="noscript">
 			<noscript>JavaScript is not available. Horizontal scroll is disabled.</noscript>
 		</slot>
-		<div bind:this={referenceElement} />
+		<div bind:this={referenceElement}></div>
 	</div>
 
 	<div class:container-inner={offsetLeft === undefined}>
